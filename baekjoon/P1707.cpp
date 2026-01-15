@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
+//이분 그래프 
+//노드 하나씩 방문할때마다 서로 다른 두가지 색을 번갈아 가며 칠하다가
+//같은 색이 칠해진 노드끼리는 연결되어있으면 이분 그래프가 아니다.
 static vector<vector<int>> A;
 static vector<bool> visited;
 static bool isEven;
-static vector<int> color; //색을 2로 나눈 나머지인 1,0으로만 구분
+static vector<int> color; //색을 2로 나눈 나머지인 1,0 으로만 구분
 void DFS(int node);
 int main() {
     int K;
