@@ -5,7 +5,7 @@ static vector<int> parent;
 void unionfunc(int a, int b);
 bool checkSame(int a, int b);
 int find(int a);
-
+// 유니온-파인드 연산 그래프 탐색에 사용
 int main () {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
