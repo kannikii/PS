@@ -1,7 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <vector>
-
+// BOJ 1197번 최소 스패닝 트리
 // 최소 신장 트리 (Minimum Spanning Tree)
 // 1. 에지 리스트로 그래프 구현, 유니온 파인드 배열 초기화
 // 2. 그래프 데이터를 가중치 기준으로 정렬
