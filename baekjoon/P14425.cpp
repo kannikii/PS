@@ -7,7 +7,7 @@ class Node {
    public:
     Node* next[26];
     bool isEnd;
-    // 생성자
+    // 생성자 
     Node() : isEnd(false) { fill(next, next + 26, nullptr); }
     // 소멸자
     ~Node() {
