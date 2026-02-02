@@ -43,7 +43,7 @@ int main() {
 void findMax(int l, int r){
     int start_index = l+(1<<k)-1;
     int end_index = r+(1<<k)-1;
-    long long Max=INT_MIN;
+    long long Max=LLONG_MIN;
     while(start_index<=end_index){
         if(start_index%2==1){
             Max=max(Max,treeMax[start_index]);
@@ -61,7 +61,7 @@ void findMax(int l, int r){
 void findMin(int l, int r){
     int start_index = l+(1<<k)-1;
     int end_index = r+(1<<k)-1;
-    long long Min=LONG_MAX;
+    long long Min=LLONG_MAX;
     while(start_index<=end_index){
         if(start_index%2==1){
             Min=min(Min,treeMin[start_index]);
