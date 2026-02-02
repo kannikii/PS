@@ -6,6 +6,8 @@ static vector<int> tree;
 static vector<int> treeA;
 static vector<int> treeB;
 static vector<int> treeC;
+// 구간합 -> 세그먼트 트리 
+// 구간합을 구하는 질의가 매우 많고, 요소의 변화가 자주 있다면 세그먼트 트리
 int main() {
     // 1. 트리 초기화
     int N;  // 입력 데이터 개수
