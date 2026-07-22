@@ -13,26 +13,26 @@ int main() {
     }
 
     // selection sort
-    // for(int i=0;i<n;i++){
-    //     int min=i;
-    //     for(int j=i+1;j<n;j++){
-    //         if(a[j]<a[min]){
-    //             min=j;
-    //         }
-    //     }
-    //     int tmp=a[i];
-    //     a[i]=a[min];
-    //     a[min]=tmp;
-    // }
     for(int i=0;i<n;i++){
+        int min=i;
         for(int j=i+1;j<n;j++){
-            if(a[i]>a[j]){
-                int tmp=a[i];
-                a[i]=a[j];
-                a[j]=tmp;
+            if(a[j]<a[min]){
+                min=j;
             }
         }
+        int tmp=a[i];
+        a[i]=a[min];
+        a[min]=tmp;
     }
+    // for(int i=0;i<n;i++){
+    //     for(int j=i+1;j<n;j++){
+    //         if(a[i]>a[j]){
+    //             int tmp=a[i];
+    //             a[i]=a[j];
+    //             a[j]=tmp;
+    //         }
+    //     }
+    // }
 
 
     for(auto it:a){
