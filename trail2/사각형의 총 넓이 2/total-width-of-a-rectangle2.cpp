@@ -14,9 +14,7 @@ int main() {
         
         for(int j=x1[i]+100;j<x2[i]+100;j++){
             for(int k=y1[i]+100;k<y2[i]+100;k++){
-                if(j>=x1[i]+100&&j<x2[i]+100){
-                    v[j][k]=1;
-                }
+                v[j][k]=1;
             }
         }
     }
