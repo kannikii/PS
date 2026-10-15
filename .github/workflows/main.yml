@@ -1,17 +1,28 @@
 name: dispatch-workflow
 
 on:
- push:
-   branches:
-     - main
+  push:
+    branches:
+      - main
 
 jobs:
- dispatch:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Trigger repository dispatch
-       uses: peter-evans/repository-dispatch@v1
-       with:
-         token: ${{ secrets.GH_PAT }}
-         repository: kannikii/Programmers_Badge_Generator
-         event-type: trigger-workflow
+  programmers-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Programmers badge
+        uses: peter-evans/repository-dispatch@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+          repository: kannikii/Programmers_Badge_Generator
+          event-type: trigger-workflow
+
+  codetree-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger CodeTree badge
+        uses: peter-evans/repository-dispatch@v4
+        with:
+          token: ${{ secrets.CODETREE_BADGE_TOKEN }}
+          repository: kannikii/CodeTree_badge_generator
+          event-type: codetree-passed
+          client-payload: '{"codetree_repo": "${{ github.repository }}"}'
