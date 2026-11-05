@@ -11,7 +11,7 @@ bool isBeautiful() {
     while (i<n) {
         int d = answer[i];              // 이 묶음의 숫자 = 묶음 크기
 
-        if (i+d-1>=n) return false;
+        if (i+d-1>n) return false;
 
         for (int j = i; j < i + d; j++) {
             if (answer[j]!=d) return false;
