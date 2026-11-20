@@ -9,7 +9,7 @@ vector<vector<int>> graph;
 vector<bool> visited;
 int cnt=0;
 void dfs(int vertex) {
-    for(int i=0;i<graph[vertex].size();i++){
+    for(int i=1;i<graph[vertex].size();i++){
         if(!visited[i] && graph[vertex][i]==1){
             visited[i]=true;
             cnt++;
